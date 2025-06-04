@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            background-color: rgb(228, 220, 220);
+            font-family: sans-serif;
+
+        }
+
+        .message {
+            border: 1px solid;
+            padding: 5px;
+            margin: 10px;
+            background-color: white;
+        }
+
+        #welcome {
+            display: flex;
+
+        }
+
+        #welcome>h2 {
+            flex-grow: 1;
+        }
+
+        #logout-btn {
+            height: 24px;
+            background-color: white;
+        }
+
+        #addmsg {
+            text-align: center;
+        }
+
+        textarea {
+            width: 70%;
+            height: 80px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="welcome">
+        <h2>Welcome, <span id="user-email"></span> (<span id="user-role"></span>)</h2>
+        <button id="logout-btn">Logout</button>
+    </div>
+    <div id="addmsg">
+        <h2>Add Messages</h2>
+        <textarea id="message-input" placeholder="Write the message..."></textarea>
+        <button id="addmessage-btn">Add</button>
+    </div>
+    <div id="message-container"></div>
+</body>
+
+</html>
+<script type="module" src="./auth.js"></script>
+<script type="module" src="./dashboard.js"></script>
